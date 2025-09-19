@@ -1,12 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="book-wrapper">
+      <div class="book-flex">
+        <div class="left">
+          <h2></h2>
+        </div>
+
+        <div class="container" id="book">
+          <h1>To-Do List</h1>
+          <form id="todo-form">
+            <input
+              type="text"
+              id="todo-input"
+              placeholder="Enter your task..."
+              required
+            />
+            <input type="date" id="date-input" required />
+            <button type="submit">Add</button>
+          </form>
+
+          <div class="filter">
+            <label for="filter-select">Filter:</label>
+            <select id="filter-select">
+              <option value="all">All</option>
+              <option value="today">Today</option>
+              <option value="future">Future</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="right">
+          <ul id="todo-list"></ul>
+        </div>
+      </div>
+    </div>
+
     <script src="js/script.js"></script>
-</body>
+  </body>
 </html>
